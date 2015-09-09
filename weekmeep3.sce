@@ -7,54 +7,14 @@ c = 0;
 sizesnake = 10;
 sizeladder = 4;
 
-canvas = zeros(1, 100);
-
-snake_head = rand(1, sizesnake);
-snake_head = snake_head .* (85) + 15;
-
-snake_tail = zeros(1, sizesnake);
-
-idx = 0;
-for i = snake_head
-    idx = idx + 1;
-    snake_tail(1, idx) = rand() * (i - 10) + 5;
-end
-
-for i = 1:sizesnake
-    snake_head(1, i) = round(snake_head(1, i));
-    snake_tail(1, i) = round(snake_tail(1, i));
-    //disp(snake_head(1, i));
-    //disp(snake_tail(1, i));
-    //disp('----');
-end
-
-ladder_top = rand(1, sizeladder);
-ladder_top = ladder_top .* (85) + 15;
-
-ladder_bottom = zeros(1, sizeladder);
-
-idx = 0;
-for i = ladder_top
-    idx = idx + 1;
-    ladder_bottom(1, idx) = rand() * (i - 10) + 5;
-end
-
-for i = 1:sizeladder
-    ladder_top(1, i) = round(ladder_top(1, i));
-    ladder_bottom(1, i) = round(ladder_bottom(1, i));
-    //disp(ladder_top(1, i));
-    //disp(ladder_bottom(1, i));
-    //disp('----');
-end
-
-function [x]=getThrow()
-    x = (rand() * 5) + 1;
-    x = round(x);
-endfunction
+cd("/home/thewisenerd/works/code/scilab/snakenladder/");
+exec('initSnake.sci');
+exec('initLadder.sci');
+exec('getThrow.sci');
+exec('printGraph.sci');
 
 function [q]=getMove(x, throw, str)
     q = x + throw;
-    //safe = 1;
     for i = 1:sizesnake
         if (snake_head(1, i) == x) then
             //safe = 0;
@@ -74,23 +34,11 @@ function [] = printInit()
     x0 = 0:100;
     y0 = zeros(1, 100);
     for qq = 0:100
-        
+
     end
     for i = 0:10:100
         plot(i);
     end
-endfunction
-
-function [] = printGraph(cord, str)
-    x = modulo(cord, 10) + 0.5;
-    if (cord > 100) then
-        x = 0;
-    end
-    y = floor(cord / 10) + 0.5;
-    if (y > 10) then
-        y = 9.5;
-    end
-    plot(x, y, str);
 endfunction
 
 moves = 0;
