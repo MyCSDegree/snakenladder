@@ -1,4 +1,4 @@
-cd("/home/thewisenerd/works/code/scilab/snakenladder/");
+cd(pwd());
 exec('initConfig.sci');
 exec('initSnake.sci');
 exec('initLadder.sci');
@@ -6,6 +6,7 @@ exec('getThrow.sci');
 exec('getMove.sci');
 exec('printGraph.sci');
 exec('printInit.sci');
+exec('verInfo.sci');
 
 moves = 0;
 printInit();

@@ -21,6 +21,10 @@ function [] = printInit()
 //        comet(x, y, "colors", 1);
 //    end
 
+
+    printf("!!!    SnakeNLadder    !!!\n");
+    printf("!!!       v%s       !!!\n\n", version);
+
     printGraph(p, p, c, s_player, s_ai    , c_player);
     printGraph(c, c, p, s_ai    , s_player, c_ai    );
 endfunction
