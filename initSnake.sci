@@ -1,3 +1,5 @@
+global snake_head
+global snake_tail
 snake_head = rand(1, sizesnake);
 snake_head = snake_head .* (85) + 15;
 

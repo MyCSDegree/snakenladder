@@ -1,4 +1,5 @@
-
+global ladder_top
+global ladder_bottom
 ladder_top = rand(1, sizeladder);
 ladder_top = ladder_top .* (85) + 15;
 

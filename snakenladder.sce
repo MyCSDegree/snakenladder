@@ -1,9 +1,15 @@
-cd(pwd());
+
+// change to current folder
+base_dir = get_absolute_file_path('snakenladder.sce');
+cd(base_dir);
+
+// import files
 exec('initConfig.sci');
 exec('initSnake.sci');
 exec('initLadder.sci');
 exec('getThrow.sci');
 exec('getMove.sci');
+exec('getCord.sci');
 exec('printGraph.sci');
 exec('printInit.sci');
 exec('verInfo.sci');
@@ -16,9 +22,6 @@ while (p < 100) & (c < 100)
     // increment moves
     moves = moves + 1;
     printf("move %i:\n", moves);
-
-    // dbg:
-    // dbg: end
 
     // player turn
     throw = getThrow();

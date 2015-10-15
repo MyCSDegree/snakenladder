@@ -6,7 +6,6 @@ function [] = printGraph(cord, prev_cord, opp_cord, str, str_op, _color)
 
 //    x = linspace(x0, x1, 100);
 //    y = linspace(y0, y1, 100);
-//    delete();
 //    comet(x,y,"colors", _color);
 
     plot(x1, y1, str);
