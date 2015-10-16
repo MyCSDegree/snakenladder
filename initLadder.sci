@@ -1,3 +1,5 @@
+// TODO: fix cyclic chains of snakes and ladders
+
 global ladder_top
 global ladder_bottom
 ladder_top = rand(1, sizeladder);
