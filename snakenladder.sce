@@ -27,8 +27,7 @@ while (p < 100) & (c < 100)
     throw = getThrow();
     printf("\tplayer rolls %i, goes to %i\n", throw, p + throw);
     p0 = p;
-    p  = getMove(p, throw, 'player');
-    printGraph(p, p0, c, s_player, s_ai, c_player);
+    p  = getMove(p, throw, 'player', 1);
     if (p > 99) then
         break;
     end
@@ -38,8 +37,7 @@ while (p < 100) & (c < 100)
     throw = getThrow();
     printf("\tai rolls %i, goes to %i\n", throw, c + throw);
     c0 = c;
-    c = getMove(c, throw, 'ai');
-    printGraph(c, c0, p, s_ai, s_player, c_ai);
+    c = getMove(c, throw, 'ai', 0);
     if (c > 99) then
         break;
     end

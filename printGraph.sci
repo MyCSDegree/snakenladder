@@ -4,12 +4,12 @@ function [] = printGraph(cord, prev_cord, opp_cord, str, str_op, _color)
 
     [q1, r1] = getCord(opp_cord);
 
-//    x = linspace(x0, x1, 100);
-//    y = linspace(y0, y1, 100);
-//    comet(x,y,"colors", _color);
+    x = linspace(x0, x1, lin_space);
+    y = linspace(y0, y1, lin_space);
+    comet(x,y,"colors", _color);
 
-    plot(x1, y1, str);
-    plot(q1, r1, str_op);
+//    plot(x1, y1, str);
+//    plot(q1, r1, str_op);
 
     if (sleeptime) then
         sleep(sleeptime)
